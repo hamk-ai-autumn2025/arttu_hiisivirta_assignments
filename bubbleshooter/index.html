@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bubble Shooter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap panel">
+    <header>
+      <h1>Bubble Shooter</h1>
+      <div class="btns">
+        <button id="btnRestart" title="Restart (R)">Restart</button>
+        <button id="btnPause" title="Pause (P)">Pause</button>
+      </div>
+    </header>
+
+    <div class="hud">
+      <div>Score: <strong id="score">0</strong></div>
+      <div>Next: <span id="nextLabel">?</span></div>
+      <div>Ceiling in: <strong id="drop">5</strong> shots</div>
+    </div>
+
+    <canvas id="game" width="480" height="720"></canvas>
+
+    <footer>
+      Move mouse / drag to aim. Click / tap to shoot. Walls bounce.
+      Pop ≥3 to clear; floating islands drop. Ceiling falls every 5 shots.
+    </footer>
+  </div>
+
+  <script defer src="src/main.js"></script>
+</body>
+</html>

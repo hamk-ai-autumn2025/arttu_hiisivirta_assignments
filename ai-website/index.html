@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baix — Road Bikes & Service</title>
+  <meta name="description" content="Baix sells performance road bikes and offers expert maintenance and repair services." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.png" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="Baix Home">
+        <span class="logo-mark">B</span> <span class="logo-text">Baix</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-link active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#bikes">Bikes</a></li>
+          <li><a class="nav-link" href="#service">Service</a></li>
+          <li><a class="nav-link" href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / HOME -->
+  <main>
+    <section id="home" class="section hero" tabindex="-1" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Baix — Ride Faster. Feel Free.</h1>
+          <p class="tagline">Precision road bikes, pro-grade service, and the smoothest ride of your life.</p>
+          <p class="ad">
+            From your first sportive to summit-chasing epics, Baix keeps you rolling. 
+            Get matched to the perfect bike and keep it razor-sharp with our same-day tune-ups.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#bikes">Explore Bikes</a>
+            <a class="btn btn-outline" href="#service">Book Service</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <!-- Replace the src below with your real image -->
+          <img src="assets/hero-bike.png" alt="Sleek Baix carbon road bike by a mountain pass" />
+          <figcaption class="visually-hidden">Baix performance road bike</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BIKES -->
+    <section id="bikes" class="section" aria-labelledby="bikes-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="bikes-title">Bikes</h2>
+          <p>Hand-picked road machines for racing, endurance, and everything in between.</p>
+        </header>
+
+        <div class="card-grid">
+          <!-- Card 1 -->
+          <article class="card">
+            <img src="assets/bike-a.png" alt="Baix Sprint A — lightweight race bike" />
+            <div class="card-body">
+              <h3>Baix Sprint A</h3>
+              <p>Featherweight climber with race geometry and snappy handling.</p>
+              <ul class="specs">
+                <li>Carbon frame</li>
+                <li>Shimano 105 Di2</li>
+                <li>8.3 kg</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="#contact">Request a test ride</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <img src="assets/bike-b.png" alt="Baix Enduro E — endurance road bike" />
+            <div class="card-body">
+              <h3>Baix Enduro E</h3>
+              <p>Endurance comfort meets speed for all-day stability.</p>
+              <ul class="specs">
+                <li>Carbon frame</li>
+                <li>SRAM Rival AXS</li>
+                <li>28c tires</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="#contact">Request a test ride</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <img src="assets/bike-c.png" alt="Baix Aero X — aerodynamic road bike" />
+            <div class="card-body">
+              <h3>Baix Aero X</h3>
+              <p>Wind-cheating aero profile for maximum speed on the flats.</p>
+              <ul class="specs">
+                <li>Aero carbon</li>
+                <li>Ultegra Di2</li>
+                <li>Deep-section wheels</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="#contact">Request a test ride</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE -->
+    <section id="service" class="section alt" aria-labelledby="service-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="service-title">Service & Maintenance</h2>
+          <p>Keep your bike dialed in with certified mechanics and same-day turnarounds.</p>
+        </header>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Quick Tune</h3>
+            <p class="price">€39</p>
+            <ul>
+              <li>Brake & shift check</li>
+              <li>Torque & safety inspection</li>
+              <li>Tire pressure set</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Book now</a>
+          </article>
+
+          <article class="price-card featured">
+            <h3>Full Service</h3>
+            <p class="price">€119</p>
+            <ul>
+              <li>Complete drivetrain clean</li>
+              <li>Wheel true & hub check</li>
+              <li>Brake bleed/adjust</li>
+              <li>Firmware updates</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Book now</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Pro Overhaul</h3>
+            <p class="price">€249</p>
+            <ul>
+              <li>Full strip & rebuild</li>
+              <li>Cable/hose replacement</li>
+              <li>BB & headset service</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Book now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="contact-title">Contact Us</h2>
+          <p>Questions, test rides, or service bookings—drop us a line.</p>
+        </header>
+
+        <div class="contact-grid">
+          <form class="contact-form" aria-label="Contact form" action="#" method="post">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-row">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option>General</option>
+                <option>Bike inquiry</option>
+                <option>Service booking</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </form>
+
+          <aside class="contact-info" aria-label="Store information">
+            <h3>Baix Flagship</h3>
+            <p>
+              Baix Bikes Oy<br />
+              Fast Road 12, 00100 Helsinki<br />
+              Finland
+            </p>
+            <p>
+              Phone: <a href="tel:+358401234567">+358 40 123 4567</a><br />
+              Email: <a href="mailto:hello@baixbikes.com">hello@baixbikes.com</a>
+            </p>
+            <p>
+              Open: Mon–Fri 10–18, Sat 10–16
+            </p>
+            <div class="map-placeholder" role="img" aria-label="Map placeholder">Map placeholder</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Baix</h4>
+        <p>Ride Faster. Feel Free.</p>
+        <small>© <span id="year"></span> Baix Bikes Oy. All rights reserved.</small>
+      </div>
+
+      <nav aria-label="Footer links">
+        <h5>Info</h5>
+        <ul class="footer-links">
+          <li><a href="#bikes">Bikes</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h5>Payments</h5>
+        <ul class="footer-links">
+          <li><a href="#">Visa</a></li>
+          <li><a href="#">Mastercard</a></li>
+          <li><a href="#">American Express</a></li>
+          <li><a href="#">PayPal</a></li>
+          <li><a href="#">Apple Pay</a></li>
+          <li><a href="#">Klarna</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Connect</h5>
+        <ul class="footer-links">
+          <li><a href="#" aria-label="Baix on Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="Baix on Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Baix on Strava">Strava</a></li>
+          <li><a href="#" aria-label="Join Baix newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+{% extends "iphelpertool/base.html" %}
+{% load static %}
+{% load form_extras %}
+{% block content %}
+<div class="row g-4">
+  <div class="col-lg-7">
+    <div class="card bg-secondary-subtle text-dark">
+      <div class="card-body">
+        <h5 class="card-title">Converter</h5>
+        <form method="post" class="row g-3">
+          {% csrf_token %}
+          <div class="col-md-4">
+            <label class="form-label">Action</label>
+            {{ form.action|add_class:"form-select" }}
+          </div>
+          <div class="col-md-8">
+            <label class="form-label">{{ form.input_text.label }}</label>
+            {{ form.input_text|add_class:"form-control" }}
+          </div>
+          <div class="col-12">
+            <label class="form-label">{{ form.extra.label }}</label>
+            {{ form.extra|add_class:"form-control" }}
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary">Go</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    {% if result %}
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Result</h5>
+        {% if result.items %}
+          <ul class="list-group">
+            {% for k,v in result.items %}
+              <li class="list-group-item d-flex justify-content-between">
+                <strong>{{ k }}</strong><span class="text-monospace">{{ v }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <pre class="mb-0">{{ result }}</pre>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if details %}
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Subnet details</h5>
+        <pre class="mb-0">{{ details|safe }}</pre>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="col-lg-5">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h6 class="card-title">Save a subnet</h6>
+        <form method="post" action="{% url 'iphelpertool:save_subnet' %}" class="row g-2">
+          {% csrf_token %}
+          <div class="col-6">{{ save_form.name|add_class:"form-control" }}</div>
+          <div class="col-6">{{ save_form.cidr|add_class:"form-control" }}</div>
+          <div class="col-12">{{ save_form.note|add_class:"form-control" }}</div>
+          <div class="col-12"><button class="btn btn-outline-secondary">Save</button></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h6 class="card-title">Recent conversions</h6>
+        <ul class="list-group">
+          {% for r in history %}
+            <li class="list-group-item small">
+              <strong>{{ r.get_action_display }}</strong><br>
+              <span class="text-muted">{{ r.input_text }}</span><br>
+              <code class="d-block text-wrap">{{ r.result_text|truncatechars:120 }}</code>
+              <em class="text-muted">{{ r.created_at }}</em>
+            </li>
+          {% empty %}
+            <li class="list-group-item">No history yet.</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Saved subnets</h6>
+        <ul class="list-group">
+          {% for s in subnets %}
+            <li class="list-group-item">
+              <strong>{{ s.name }}</strong> — {{ s.cidr }}<br>
+              <small class="text-muted">{{ s.note }}</small>
+            </li>
+          {% empty %}
+            <li class="list-group-item">No saved subnets.</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

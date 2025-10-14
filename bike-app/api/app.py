@@ -5,6 +5,7 @@ from openai import OpenAI
 import os, json
 import re
 from fastapi.middleware.cors import CORSMiddleware
+from decimal import Decimal
 
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -101,7 +102,8 @@ def recommend(q: Query):
 Use ONLY these fields; do not invent specs. Keep each explanation ≤80 words.
 Return JSON: [{{brand, model, reason, url, image_url}}]
 User request: {q.text}
-Candidates: {json.dumps(facts)}
+Candidates: {json.dumps(facts, default=lambda o: float(o) if isinstance(o, Decimal) else o, ensure_ascii=False)}
+
 """
     out = client.chat.completions.create(
         model="gpt-4o-mini",

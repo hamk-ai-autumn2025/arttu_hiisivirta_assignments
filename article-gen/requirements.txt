@@ -1,0 +1,15 @@
+# Python >= 3.10 recommended
+
+# Core CLI functionality
+Markdown>=3.6,<3.7
+Jinja2>=3.1,<3.2
+
+# PDF backend (pure-Python)
+xhtml2pdf>=0.2,<0.3
+# The following are common xhtml2pdf transitive deps; pinning keeps builds stable:
+reportlab>=4.0,<5.0
+Pillow>=10.0,<11.0
+html5lib>=1.1,<2.0
+
+# LLM (to generate real content). If you don’t want LLM features, you can remove this.
+openai>=1.30,<2.0

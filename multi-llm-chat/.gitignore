@@ -1,0 +1,29 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+env/
+venv/
+pip-wheel-metadata/
+
+# --- Streamlit ---
+.streamlit/credentials.toml
+.streamlit/secrets.toml
+
+# --- Environment files (keep only .env.example in repo) ---
+.env
+*.env
+
+# --- OS / Editor junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Data / outputs (optional) ---
+*.sqlite3
+*.db
+*.log
+*.csv
+*.parquet

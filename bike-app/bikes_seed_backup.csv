@@ -1,0 +1,5 @@
+brand,model,discipline,price_eur,frame_material,tire_clearance_mm,groupset,weight_kg,stack_mm,reach_mm,size_label,url,image_url
+Giant,Revolt 2,gravel,1699,aluminum,45,Shimano GRX 10s,10.2,585,390,M,https://www.giant-bicycles.com/revolt-2,https://example.com/revolt2.jpg
+Cannondale,Topstone 3,gravel,1499,aluminum,45,Shimano Sora,10.5,590,395,M,https://www.cannondale.com/topstone-3,https://example.com/topstone3.jpg
+Trek,Domane AL 2,road,1199,aluminum,32,Shimano Claris,9.9,575,380,54,https://www.trekbikes.com/domane-al-2,https://example.com/domaneal2.jpg
+
